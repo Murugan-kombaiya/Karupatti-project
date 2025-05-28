@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Register - Karupatti Shop</title>
+        <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fbd3e9, #bb377d, #83a4d4, #b6fbff);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #333;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    header {
+      background: linear-gradient(90deg, #b6fbff, #83a4d4, #bb377d);
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-size: 300% 300%;
+      animation: gradientBG 10s ease infinite;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      margin: 0 1rem;
+    }
+    main {
+      max-width: 500px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #bb377d;
+      margin-bottom: 1.5rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    form input {
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    form button {
+      padding: 0.75rem;
+      background: #bb377d;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background: #a02e6f;
+    }
+    .redirect-btn {
+      background: transparent;
+      border: 2px solid #4b2e83;
+      color: #4b2e83;
+      margin-top: 1rem;
+    }
+    .redirect-btn:hover {
+      background: #4b2e83;
+      color: white;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 1.5rem 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+    </head>
+    <body>
+
+        <header>
+            <div class="logo">Karupatti Shop</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Create Account</h1>
+            <form id="register-form">
+                <input type="text" id="name" placeholder="Your Name" required />
+                <input type="email" id="email" placeholder="Email Address"
+                    required />
+                <input type="password" id="password" placeholder="Password"
+                    required />
+                <input type="password" id="confirmPassword"
+                    placeholder="Confirm Password" required />
+                <p id="errorMsg" class="error"></p>
+                <button type="submit">Register</button>
+                <button type="button" class="redirect-btn"
+                    onclick="window.location.href='index.html'">Already
+                    Registered? Go to Home</button>
+            </form>
+        </main>
+
+        <script>
+    const form = document.getElementById('register-form');
+    const errorMsg = document.getElementById('errorMsg');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      if (password !== confirmPassword) {
+        errorMsg.textContent = "Passwords do not match!";
+        return;
+      }
+
+      // Save to localStorage
+      const user = { name, email, password };
+      localStorage.setItem('registeredUser', JSON.stringify(user));
+
+      alert("Registration Successful!");
+      window.location.href = "index.html";
+    });
+  </script>
+
+    </body>
+</html>

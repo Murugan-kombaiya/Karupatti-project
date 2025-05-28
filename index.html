@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Karupatti Shop - Home</title>
+        <style>
+  /* Reset & base */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fbd3e9, #bb377d, #83a4d4, #b6fbff);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+    color: #333;
+  }
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(90deg, #b6fbff, #83a4d4, #bb377d);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-size: 300% 300%;
+    animation: gradientBG 12s ease infinite;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  nav {
+    display: flex;
+    gap: 1.8rem;
+  }
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  nav a:hover {
+    color: #fff0d6;
+    transform: scale(1.1);
+  }
+
+  /* Main product grid */
+  main {
+    max-width: 1200px;
+    margin: 3rem auto 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+    padding: 0 1rem;
+  }
+  .product-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  .product-card:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  }
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .product-info {
+    padding: 1.2rem 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .product-info h2 {
+    margin: 0 0 0.6rem 0;
+    font-size: 1.4rem;
+    color: #4b2e83;
+    font-weight: 700;
+  }
+  .product-info p.price {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #bb377d;
+    margin: 0;
+  }
+
+  /* Footer styling */
+  footer {
+    background: linear-gradient(90deg, #bb377d, #83a4d4, #b6fbff);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 3rem 2rem 4rem;
+    box-shadow: inset 0 10px 30px -15px rgba(255,255,255,0.2);
+  }
+  footer > div {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-between;
+    opacity: 0;
+    animation: fadeInUp 1.2s forwards;
+  }
+
+  /* Footer sections */
+  footer div > div {
+    flex: 1 1 240px;
+    min-width: 240px;
+  }
+  footer h3 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  footer p, footer ul, footer form {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  footer ul li {
+    margin-bottom: 0.6rem;
+  }
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  footer ul li a:hover {
+    color: #f7d6e0;
+  }
+
+  /* Newsletter form */
+  #newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #newsletter-form input[type="email"] {
+    padding: 0.7rem 1.2rem;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+  #newsletter-form button {
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    border: none;
+    background: #4b2e83;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  #newsletter-form button:hover {
+    background: #7c56d9;
+  }
+
+  /* Contact form */
+  #contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  #contact-form input, #contact-form textarea {
+    padding: 0.7rem 1rem;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    resize: none;
+    flex-grow: 1;
+  }
+  #contact-form input[type="text"], #contact-form input[type="email"] {
+    flex: 1 1 45%;
+  }
+  #contact-form textarea {
+    flex: 1 1 100%;
+    border-radius: 16px;
+  }
+  #contact-form button {
+    flex: 1 1 100%;
+    padding: 0.7rem 1.5rem;
+    border-radius: 30px;
+    border: none;
+    background: #4b2e83;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  #contact-form button:hover {
+    background: #7c56d9;
+  }
+
+  /* Footer bottom text */
+  footer p.bottom-text {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    user-select: none;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+  }
+
+  /* Fade in animation for footer content */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    nav {
+      gap: 1rem;
+    }
+    main {
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    footer div > div {
+      min-width: 100%;
+    }
+    #contact-form input[type="text"], #contact-form input[type="email"] {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">Karupatti Shop</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="shop.html">Shop</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </header>
+
+        <main id="products-container">
+            <!-- Products loaded here -->
+        </main>
+
+        <footer>
+            <div>
+                <!-- About Us -->
+                <div>
+                    <h3>About Karupatti Shop</h3>
+                    <p>
+                        Karupatti Shop is your trusted source for natural
+                        sweeteners and organic products. We focus on quality,
+                        sustainability, and customer satisfaction.
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        <strong>Address:</strong><br />
+                        123 Sweet Lane,<br />
+                        Nature City, TN - 600001
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3>Contact Info</h3>
+                    <p><strong>Phone:</strong> +91 99449 19318</p>
+                    <p><strong>Email:</strong> info@karupattishop.com</p>
+                    <p><strong>Working Hours:</strong> Mon - Sat: 9am - 6pm</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://www.linkedin.com/in/murugan007/"
+                            target="_blank"
+                            style="color: #fff; font-size: 1.5rem; text-decoration: none;">
+                            🔗 LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3>Subscribe to our Newsletter</h3>
+                    <form id="newsletter-form">
+                        <input type="email" name="newsletter-email"
+                            placeholder="Your Email" required />
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- Contact Form -->
+                <div style="flex: 1 1 100%; margin-top: 3rem;">
+                    <h3 style="text-align: center;">Send us a Message</h3>
+                    <form id="contact-form">
+                        <input type="text" name="name" placeholder="Your Name"
+                            required />
+                        <input type="email" name="email"
+                            placeholder="Your Email" required />
+                        <textarea name="message" rows="4"
+                            placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <p class="bottom-text">© 2025 Karupatti Shop. All rights
+                reserved.</p>
+        </footer>
+
+        <script>
+  // Newsletter form submit
+  document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = this['newsletter-email'].value.trim();
+    if(email) {
+      alert(`Thanks for subscribing with ${email}!`);
+      this.reset();
+    } else {
+      alert('Please enter a valid email.');
+    }
+  });
+
+  // Contact form submit
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = this.name.value.trim();
+    const email = this.email.value.trim();
+    const message = this.message.value.trim();
+    if (name && email && message) {
+      alert(`Thank you, ${name}! Your message has been received.`);
+      this.reset();
+    } else {
+      alert('Please fill out all fields.');
+    }
+  });
+</script>
+
+        <script>
+  // Load products dynamically
+  const apiURL = 'https://run.mocky.io/v3/2eb16d2d-d859-4d69-9fff-11ff82e54807';
+  const productsContainer = document.getElementById('products-container');
+
+  fetch(apiURL)
+    .then(res => {
+      if (!res.ok) throw new Error('Failed to fetch products');
+      return res.json();
+    })
+    .then(data => {
+      const products = data.products || data;
+      productsContainer.innerHTML = products.map(product => `
+        <a href="product.html?product=${encodeURIComponent(product.name)}" class="product-card">
+          <img src="${product.image}" alt="${product.name}" />
+          <div class="product-info">
+            <h2>${product.name}</h2>
+            <p class="price">₹${product.price}</p>
+          </div>
+        </a>
+      `).join('');
+    })
+    .catch(err => {
+      productsContainer.innerHTML = '<p style="color:red; font-weight:bold;">Failed to load products.</p>';
+      console.error(err);
+    });
+</script>
+    </body>
+</html>
