@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Product Details - Karupatti Shop</title>
-        <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product Details - Karupatti Shop</title>
+    <style>
     /* Reset & base */
     * {
       box-sizing: border-box;
@@ -310,73 +310,75 @@
       }
     }
   </style>
-        <!-- Optional: Google Fonts Poppins -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap"
-            rel="stylesheet" />
-    </head>
-    <body>
+    <!-- Optional: Google Fonts Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
 
-        <header>
-            <div class="logo">Karupatti Shop</div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="product.html">Products</a>
-                <a href="shop.html">Shop</a>
-                <a href="register.html">Register</a>
-            </nav>
-        </header>
+    <header>
+      <div class="logo">Karupatti Shop</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Products</a>
+        <a href="shop.html">Shop</a>
+        <a href="register.html">Register</a>
+      </nav>
+    </header>
 
-        <main id="product-details">
-            <!-- Product details will be inserted by JS -->
-        </main>
+    <main id="product-details">
+      <!-- Product details will be inserted by JS -->
+    </main>
 
-        <footer>
-            <div class="footer-container">
-                <div class="footer-section about">
-                    <h2>About Karupatti Shop</h2>
-                    <p>We provide the best natural karupatti products straight
-                        from the source to your doorstep.</p>
-                </div>
-                <div class="footer-section links">
-                    <h2>Quick Links</h2>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="product.html">Products</a></li>
-                        <li><a href="register.html">Register</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section contact">
-                    <h2>Contact Us</h2>
-                    <p>Email: support@karupattishop.com</p>
-                    <p>Phone: +91 98765 43210</p>
-                    <div class="social-icons">
-                        <a href="#"><img
-                                src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000"
-                                alt="Facebook" /></a>
-                        <a href="#"><img
-                                src="https://img.icons8.com/?size=100&id=CtMFJTP5iLtm&format=png&color=000000"
-                                alt="Twitter" /></a>
-                        <a href="#"><img
-                                src="https://img.icons8.com/?size=100&id=BrU2BBoRXiWq&format=png&color=000000"
-                                alt="Instagram" /></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                &copy; 2025 Karupatti Shop. All rights reserved.
-            </div>
-        </footer>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section about">
+          <h2>About Karupatti Shop</h2>
+          <p>We provide the best natural karupatti products straight
+            from the source to your doorstep.</p>
+        </div>
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-section contact">
+          <h2>Contact Us</h2>
+          <p>Email: support@karupattishop.com</p>
+          <p>Phone: +91 98765 43210</p>
+          <div class="social-icons">
+            <a href="#"><img
+                src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000"
+                alt="Facebook" /></a>
+            <a href="#"><img
+                src="https://img.icons8.com/?size=100&id=CtMFJTP5iLtm&format=png&color=000000"
+                alt="Twitter" /></a>
+            <a href="#"><img
+                src="https://img.icons8.com/?size=100&id=BrU2BBoRXiWq&format=png&color=000000"
+                alt="Instagram" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 Karupatti Shop. All rights reserved.
+      </div>
+    </footer>
 
-        <script>
-    const apiURL = 'https://run.mocky.io/v3/2eb16d2d-d859-4d69-9fff-11ff82e54807';
-    const container = document.getElementById('product-details');
+    <script>
+    const apiURL = 'product.json'; // Use local JSON file
+const container = document.getElementById('product-details');
 
-    function getQueryParam(param) {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get(param);
-    }
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+console.log(product.image); // ✅ check path is correct
+
 
     const productName = getQueryParam('product');
 
@@ -425,5 +427,5 @@
     }
   </script>
 
-    </body>
+  </body>
 </html>
