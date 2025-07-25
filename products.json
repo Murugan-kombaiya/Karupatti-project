@@ -3,112 +3,112 @@
     "id": 1,
     "name": "Karupatti Classic",
     "price": 150,
-    "description": "Traditional palm jaggery from Tamil Nadu",
-    "image": "images/img1.jpg"
+    "description": "Traditional palm jaggery from Tamil Nadu.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img1.jpg"
   },
   {
     "id": 2,
-    "name": "Organic Karupatti",
-    "price": 160,
-    "description": "100% natural palm jaggery without additives",
-    "image": "images/img2.webp"
+    "name": "Karupatti Premium",
+    "price": 180,
+    "description": "Premium quality organic palm jaggery.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img2.webp"
   },
   {
     "id": 3,
-    "name": "Herbal Karupatti",
+    "name": "Karupatti Delight",
     "price": 170,
-    "description": "Infused with herbs for health benefits",
-    "image": "images/img3.webp"
+    "description": "Delicious and healthy sweetener for all ages.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img3.webp"
   },
   {
     "id": 4,
-    "name": "Premium Karupatti",
-    "price": 200,
-    "description": "Finest quality palm jaggery blocks",
-    "image": "images/img4.jpg"
+    "name": "Karupatti Powder",
+    "price": 160,
+    "description": "Fine powdered palm jaggery for daily use.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img4.jpg"
   },
   {
     "id": 5,
-    "name": "Karupatti Powder",
-    "price": 130,
-    "description": "Easy-to-use powdered palm jaggery",
-    "image": "images/img5.jpg"
+    "name": "Karupatti Chunks",
+    "price": 155,
+    "description": "Chunky and tasty karupatti pieces.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img5.jpg"
   },
   {
     "id": 6,
-    "name": "Karupatti Candy",
-    "price": 100,
-    "description": "Small bite-sized palm jaggery candies",
-    "image": "images/img6.jpg"
+    "name": "Organic Karupatti",
+    "price": 190,
+    "description": "100% organic certified palm jaggery.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img6.jpg"
   },
   {
     "id": 7,
-    "name": "Palm Sugar Cubes",
-    "price": 140,
-    "description": "Cube-shaped palm jaggery for tea and coffee",
-    "image": "images/img7.jpg"
+    "name": "Karupatti with Dry Fruits",
+    "price": 210,
+    "description": "Blended with rich dry fruits for extra nutrition.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img7.jpg"
   },
   {
     "id": 8,
-    "name": "Karupatti with Dry Fruits",
-    "price": 180,
-    "description": "Palm jaggery mixed with dry fruits",
-    "image": "images/img8.jpg"
+    "name": "Liquid Karupatti",
+    "price": 175,
+    "description": "Palm jaggery syrup perfect for tea and desserts.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img8.jpg"
   },
   {
     "id": 9,
-    "name": "Liquid Karupatti",
-    "price": 160,
-    "description": "Thick liquid form of palm jaggery",
-    "image": "images/img9.jpg"
+    "name": "Palm Sugar Combo",
+    "price": 200,
+    "description": "Combo of palm sugar and karupatti.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img9.jpg"
   },
   {
     "id": 10,
-    "name": "Karupatti for Diabetics",
-    "price": 155,
-    "description": "Sugar-free friendly palm jaggery variant",
-    "image": "images/img10.jpg"
+    "name": "Karupatti Herbal Mix",
+    "price": 220,
+    "description": "Blended with herbal ingredients for health.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img10.jpg"
   },
   {
     "id": 11,
-    "name": "Karupatti Energy Bites",
-    "price": 120,
-    "description": "Healthy energy bites with palm jaggery",
-    "image": "images/img11.webp"
+    "name": "Karupatti Balls",
+    "price": 160,
+    "description": "Palm jaggery in snackable ball form.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img11.webp"
   },
   {
     "id": 12,
-    "name": "Village Style Karupatti",
-    "price": 145,
-    "description": "Made using traditional village methods",
-    "image": "images/img12.jpg"
+    "name": "Karupatti Sweets",
+    "price": 195,
+    "description": "Authentic South Indian sweets with karupatti.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img12.jpg"
   },
   {
     "id": 13,
-    "name": "Palm Jaggery Balls",
-    "price": 135,
-    "description": "Round shaped jaggery sweets",
-    "image": "images/img13.jpg"
+    "name": "Karupatti for Diabetes",
+    "price": 230,
+    "description": "Low GI jaggery for health-conscious users.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img13.jpg"
   },
   {
     "id": 14,
-    "name": "Karupatti Syrup",
-    "price": 175,
-    "description": "Perfect for desserts and drinks",
-    "image": "images/img14.webp"
+    "name": "Karupatti Tea Cubes",
+    "price": 185,
+    "description": "Cubes ready to drop into your tea or milk.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img14.webp"
   },
   {
     "id": 15,
-    "name": "Karupatti Chunks",
-    "price": 150,
-    "description": "Chunky jaggery pieces for daily use",
-    "image": "images/img15.jpg"
+    "name": "Village Style Karupatti",
+    "price": 170,
+    "description": "Made in traditional methods from village farms.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img15.jpg"
   },
   {
     "id": 16,
-    "name": "Karupatti Gift Pack",
-    "price": 250,
-    "description": "Ideal for gifting during festivals",
-    "image": "images/img16.jpg"
+    "name": "Karupatti with Ginger",
+    "price": 210,
+    "description": "Infused with natural ginger for immunity boost.",
+    "image": "https://raw.githubusercontent.com/Murugan-kombaiya/Karupatti-project/main/images/img16.webp"
   }
 ]
